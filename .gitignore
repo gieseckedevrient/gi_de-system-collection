@@ -1,0 +1,7 @@
+__pycache__
+.vscode/settings.json
+.pre-commit-config.yaml
+tests/integration/inventory*
+.ansible
+.cache
+.history

@@ -1,0 +1,2 @@
+# contain filename and rule to be ignored. also supports comments starting with #
+# playbook.yml package-latest # disable package-latest rule for playbook.yml

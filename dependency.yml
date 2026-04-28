@@ -1,0 +1,45 @@
+---
+bomFormat: CycloneDX
+specVersion: "1.4"
+version: 1    # SHOULD be incremented by 1 on each update
+components:
+  - type: application
+    publisher: Community
+    name: Pscx
+    version: "3.3.2" # renovate: datasource=powershell depName=Pscx
+    releasenotes:
+      type: url
+      name: Release Notes
+      page: https://www.powershellgallery.com/packages/Pscx/3.3.2
+  - type: application
+    publisher: DSC Community
+    name: ComputerManagementDsc
+    version: "10.0.0" # renovate: datasource=powershell depName=ComputerManagementDsc
+    releasenotes:
+      type: url
+      name: Release Notes
+      page: https://www.powershellgallery.com/packages/ComputerManagementDsc/10.0.0
+  - type: application
+    publisher: Microsoft
+    name: ActiveDirectory
+    version: "1.0.0.0" # renovate: datasource=powershell depName=ActiveDirectory
+    releasenotes:
+      type: url
+      name: Release Notes
+      page: https://docs.microsoft.com/en-us/powershell/module/activedirectory/
+  - type: application
+    publisher: Community
+    name: cDtcResource
+    version: "1.0.2" # renovate: datasource=powershell depName=cDtcResource
+    releasenotes:
+      type: url
+      name: Release Notes
+      page: https://www.powershellgallery.com/packages/cDtcResource
+  - type: application
+    publisher: Community
+    name: Carbon
+    version: "2.15.1" # renovate: datasource=powershell depName=Carbon
+    releasenotes:
+      type: url
+      name: Release Notes
+      page: https://github.com/webmd-health-services/Carbon/releases/tag/2.15.1

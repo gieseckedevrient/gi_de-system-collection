@@ -1,0 +1,53 @@
+---
+# .ansible-lint
+
+# Specify which rules profile to be used (min, basic, moderate, safety, shared, production).
+#
+profile: null
+
+# exclude_paths included in this file are parsed relative to this file's location
+# and not relative to the CWD of execution.
+exclude_paths:
+  - .cache/ # implicit unless exclude_paths is defined in config
+  - .git/
+
+# verbosity: 1
+
+# Enable checking of loop variable prefixes in roles
+loop_var_prefix: "_{role}_"
+
+# Enforce variable names to follow pattern below, in addition to Ansible own
+# requirements, like avoiding python identifiers. To disable add `var-naming`
+# to skip_list.
+var_naming_pattern: "^[a-z_][a-z0-9_]*$"
+
+# Ansible-lint completely ignores rules or tags listed below
+skip_list:
+  - yaml # External linter which will also produce its own rule codes.
+  - name[template]
+  - galaxy[no-changelog]
+
+# Ansible-lint does not automatically load rules that have the 'opt-in' tag.
+# You must enable opt-in rules by listing each rule 'id' below.
+enable_list:
+  - empty-string-compare # opt-in
+  - loop-var-prefix # opt-in
+  - no-prompting # opt-in
+  - no-same-owner # opt-in
+  - name[prefix] # opt-in
+
+# Ansible-lint does not fail on warnings from the rules or tags listed below
+warn_list:
+  - experimental # experimental is included in the implicit list
+  - jinja[spacing] # warning until we resolve all reported false-positives
+  - role-name
+  - warning[empty-playbook] # because ansible considers it warning only
+  - var-naming[no-role-prefix] # warning until we resolve all reported issue
+
+# Offline mode disables installation of requirements.yml
+offline: true
+
+# List of additional kind:pattern to be added at the top of the default
+# match list, first match determines the file kind.
+# Update list with all playbook available in the repository (required)
+# kinds:
